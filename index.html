@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="code.js">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+
+    <img width="80" height="80" src="https://img.icons8.com/officel/80/leaderboard.png" alt="leaderboard" />
+    <h2> Leaderboard</h2>
+    <ol id="leaderboard"></ol>
+
+    <h1><img width="64" height="64"
+            src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-charade-stay-at-home-flaticons-flat-flat-icons.png"
+            alt="external-charade-stay-at-home-flaticons-flat-flat-icons" /> Guess the secret Number</h1>
+    <p>Select a level and try to guess the number!</p>
+
+    <select class="d-block" id="level">
+        <option value="10"> Easy (1-10) </option>
+        <option value="20"> Medium (1-50) </option>
+        <option value="50" selected> Hard (1-100) </option>
+    </select>
+
+    <br>
+
+    <input type="number" id="guess" placeholder="Enter your guess">
+    <br>
+    <button id="checkBtn">Check</button>
+    <button id="restartBtn">Play Again</button>
+
+    <p id="message"></p>
+    <p id="hint"></p>
+    <p>Tries left : <span id="tries">5</span></p>
+
+    <audio id="sound-correct" src="https://www.soundjay.com/buttons/sounds/button-1.mp3"></audio>
+    <audio id="sound-wrong" src="https://www.soundjay.com/buttons/sounds/button-5.mp3"></audio>
+    <audio id="sound-close" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
+    <audio id="bg-music" src="https://www.soundhelix.com/audio/SoundHelix-Song-1.mp3" loop></audio>
+
+
+
+    <script src="code.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</body>
+
+</html>

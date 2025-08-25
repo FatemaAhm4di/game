@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: radial-gradient(circle farthest-corner at 50.3% 47.3%, rgba(113,42,92,1) 0.1%, rgba(40,25,46,1) 90%);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1, h2, p {
+    color: #f7fafd;
+}
+
+input,
+select {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #3c0c34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto; /* ✅ اینجا درست شد: وسط می‌افته */
+}
+/* Highlight top players */
+#leaderboard {
+    list-style: none;
+    padding: 0;
+    margin: 15px auto;
+    max-width: 300px;
+    text-align: left;
+}
+
+#leaderboard li {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: #2c2c2c;
+    color: white;
+}
+
+#leaderboard li:first-child {
+    background: gold;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#leaderboard li:nth-child(2) {
+    background: silver;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#leaderboard li:nth-child(3) {
+    background: #cd7f32;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+button:hover {
+    background: #6e025c;
+}
+
+#message {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#hint {
+    font-style: italic;
+    color: #8e44ad;
+    margin-top: 10px;
+    transition: opacity 0.3s;
+}
+
+#tries {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.flash-green {
+    color: green;
+    animation: flashGreen 0.5s;
+}
+
+@keyframes flashGreen {
+    0%, 100% { color: green; }
+    50% { color: lime; }
+}
+
+.flash-red {
+    color: red;
+    animation: flashRed 0.5s;
+}
+
+@keyframes flashRed {
+    0%, 100% { color: red; }
+    50% { color: darkred; }
+}
+
+/* --- Responsive Design --- */
+
+/* موبایل (تا 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, select, button {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+    }
+
+    #message, #hint, #tries {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    #leaderboard {
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* تبلت (601px تا 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    input, select, button {
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #leaderboard {
+        max-width: 400px;
+    }
+}
